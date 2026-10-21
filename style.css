@@ -1,0 +1,107 @@
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:#f9f8f7;overflow-x:hidden}
+  body{color:#292929;font-family:'Ubuntu',sans-serif}
+  #wrap{position:relative;width:100%;overflow:hidden}
+  #stage{position:absolute;top:0;left:0;width:1440px;height:3505px;background:#f9f8f7;transform-origin:0 0;overflow:hidden}
+  .abs{position:absolute}
+  p{line-height:normal;font-style:normal}
+  .amaranth{font-family:'Amaranth',sans-serif;font-weight:400}
+  .nowrap{white-space:nowrap}
+
+  /* Nav */
+  #nav{position:fixed;top:11px;left:0;width:1440px;z-index:100;transform-origin:0 0;display:flex;align-items:center;justify-content:center;gap:412px}
+  .logo{font-family:'Lilita One',sans-serif;font-size:36px;color:#292929;line-height:normal;display:flex;align-items:flex-end;justify-content:center}
+  .pill{background:#ffe798;height:49px;border-radius:100px;padding:8px;display:flex;align-items:center;justify-content:center;cursor:pointer}
+  .pill a{display:flex;align-items:flex-end;justify-content:center;padding:12px 24px;border-radius:50px;font-family:'Amaranth',sans-serif;font-size:16px;color:#292929;text-decoration:none;white-space:nowrap}
+  .btn{display:flex;align-items:flex-end;justify-content:center;padding:14px 30px;border-radius:100px;font-family:'Amaranth',sans-serif;font-size:16px;color:#fffeff;text-decoration:none;white-space:nowrap}
+  .btn.contact{background:#f18fae;border:1px solid #f18fae}
+
+  /* Hero */
+  #hero{left:235px;top:210px;width:1007px;display:flex;flex-direction:column;gap:43px;align-items:center}
+  #hero h1{font-family:'Amaranth',sans-serif;font-weight:700;font-size:74.206px;line-height:normal;white-space:nowrap;color:#292929}
+  #hero p{font-family:'Ubuntu',sans-serif;font-size:24px;text-align:center;width:100%;height:71px;color:#292929}
+
+  /* Carousel */
+  #carousel{left:calc(50% - 0.5px);transform:translateX(-50%);top:950px;width:1301px;height:768px;border-radius:63px;background:#ffc403;overflow:hidden}
+  .tag{position:absolute;left:41px;top:65px;width:257px;background:#d9a705;border-radius:18px;padding:16px 20px;display:flex;align-items:center;justify-content:center;font-family:'Amaranth',sans-serif;font-size:24px;color:#fff;white-space:nowrap}
+  .arrows{position:absolute;left:1105px;top:65px;width:121px;height:61px;background:#d9a705;border-radius:22px;padding:12px 8px;display:flex;align-items:center;justify-content:center;gap:9px}
+  .arrows button{width:43.298px;height:43.298px;border:0;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center}
+  .arrows svg{width:100%;height:100%}
+  #cards{left:110px;top:1131px;width:1185px;display:flex;gap:18px;align-items:center;justify-content:flex-start;overflow-x:auto;overflow-y:clip;scrollbar-width:none;scroll-behavior:smooth}
+  #cards::-webkit-scrollbar{display:none}
+  .card{flex:none;width:293.2px;height:521.2px;background:#fff;border-radius:30px}
+
+  /* Portfolio banner */
+  #banner{left:-2px;top:1817px;width:1440px;height:392px;background:#699b6d;border-top:8px solid #ffc8da;border-bottom:8px solid #ffc8da}
+  #banner-title{left:420px;top:1914px;width:618px;display:flex;justify-content:center;font-size:48px;color:#fffdf9}
+  #banner-text{left:729px;transform:translateX(-50%);top:1999px;width:986px;font-family:'Ubuntu',sans-serif;font-size:18px;text-align:center;color:rgba(245,245,245,.78)}
+  #banner-btn{left:679px;top:2068px;width:100px;height:44px;background:#fc8ad3;border:1px solid #fc8ad3;align-items:center}
+
+  /* Yapping heading */
+  #yap{left:50%;transform:translateX(-50%);top:2281px;width:618px;display:flex;justify-content:center}
+  #yap div{font-family:'Amaranth',sans-serif;font-size:48px;text-align:center;white-space:nowrap;line-height:normal;color:#292929}
+
+  /* Timeline */
+  .tl-text{font-family:'Amaranth',sans-serif;font-size:20px;width:330px;line-height:normal}
+  .year{font-family:'Amaranth',sans-serif;font-size:40px;line-height:normal;white-space:nowrap;color:#292929}
+  .star{width:51.776px;height:51.776px}
+  .dot{width:12.231px;height:12.231px}
+
+
+  /* Pink button animations */
+  .btn{overflow:hidden;cursor:pointer;user-select:none;-webkit-tap-highlight-color:transparent;
+       transition:transform .18s cubic-bezier(.34,1.56,.64,1),box-shadow .18s ease,filter .18s ease}
+  .btn.contact{position:relative}
+  .btn:hover{transform:translateY(-3px) scale(1.05);box-shadow:0 8px 18px rgba(241,143,174,.45);filter:brightness(1.04)}
+  .btn:active{transform:translateY(1px) scale(.93);box-shadow:0 2px 4px rgba(241,143,174,.4);filter:brightness(.96);transition-duration:.08s}
+  .btn.pop{animation:pop .45s cubic-bezier(.34,1.56,.64,1)}
+  @keyframes pop{0%{transform:scale(.93)}50%{transform:scale(1.1)}100%{transform:scale(1)}}
+  .ripple{position:absolute;border-radius:50%;background:rgba(255,255,255,.55);transform:scale(0);pointer-events:none;animation:ripple .6s ease-out forwards}
+  @keyframes ripple{to{transform:scale(1);opacity:0}}
+  .btn.contact:hover{box-shadow:0 8px 18px rgba(241,143,174,.5)}
+  #banner-btn:hover{box-shadow:0 8px 18px rgba(0,0,0,.18)}
+  .arrows button{transition:transform .15s ease}
+  .arrows button:active{transform:scale(.85)}
+
+  #cards{cursor:grab;scroll-snap-type:x proximity}
+  #cards.dragging{cursor:grabbing;scroll-behavior:auto;scroll-snap-type:none}
+  .card{scroll-snap-align:start;user-select:none}
+
+
+  /* ---------- Subtle motion ---------- */
+  /* Scroll / load reveal */
+  .js .reveal{opacity:0}
+  .js .reveal.in{animation:reveal .8s cubic-bezier(.2,.7,.2,1) both;animation-delay:var(--d,0s)}
+  @keyframes reveal{from{opacity:0;translate:var(--x,0) var(--y,24px)}to{opacity:1;translate:0 0}}
+
+  .js .reveal.zoom.in{animation-name:zoom;animation-duration:.6s;animation-timing-function:cubic-bezier(.34,1.56,.64,1)}
+  @keyframes zoom{from{opacity:0;scale:.4}to{opacity:1;scale:1}}
+
+  .js .reveal.line{opacity:1;clip-path:inset(0 0 100% 0)}
+  .js .reveal.line.in{animation-name:grow;animation-duration:1.6s;animation-timing-function:cubic-bezier(.4,0,.2,1)}
+  @keyframes grow{from{clip-path:inset(0 0 100% 0)}to{clip-path:inset(0 0 0 0)}}
+
+  /* Nav link underline */
+  .pill a{position:relative}
+  .pill a::after{content:"";position:absolute;left:24px;right:24px;bottom:9px;height:2px;border-radius:2px;background:#292929;
+    transform:scaleX(0);transform-origin:right center;transition:transform .35s cubic-bezier(.65,0,.35,1)}
+  .pill a:hover::after,.pill a:focus-visible::after{transform:scaleX(1);transform-origin:left center}
+  .logo{transition:transform .25s ease}
+  .logo:hover{transform:scale(1.05) rotate(-2deg)}
+
+  /* Card hover: lift + giggle */
+  #cards{padding:14px 0;top:1117px}
+  .card{transition:translate .3s cubic-bezier(.2,.7,.2,1),box-shadow .3s ease}
+  .card:hover{translate:0 -6px;box-shadow:0 8px 14px rgba(41,41,41,.16);animation:giggle .75s ease-in-out}
+  #cards.dragging .card:hover{animation:none}
+  @keyframes giggle{
+    0%{rotate:0deg}15%{rotate:-2.4deg}30%{rotate:2deg}45%{rotate:-1.6deg}
+    60%{rotate:1.2deg}75%{rotate:-.6deg}100%{rotate:0deg}}
+
+  @media (prefers-reduced-motion:reduce){
+    .js .reveal,.js .reveal.line{opacity:1;clip-path:none}
+    .js .reveal.in,.card:hover{animation:none!important}
+    .pill a::after,.card,.logo{transition:none}
+  }
+
+  #footer{left:0;top:3456px;width:1440px;height:49px;background:#f18fae}
